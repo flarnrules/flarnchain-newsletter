@@ -1,0 +1,53 @@
+#!/bin/bash
+
+dir_path="/mnt/c/Users/Benjamin/Documents/flarnchain/wads/favorites"
+
+echo '<!DOCTYPE html>'
+echo '<html>'
+echo '<head>'
+echo '    <style>'
+echo '        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");'
+echo '        body {'
+echo '            font-family: "Roboto", sans-serif;'
+echo '            margin: 0;'
+echo '            padding: 0;'
+echo '            display: flex;'
+echo '            flex-direction: column;'
+echo '            align-items: stretch;'
+echo '        }'
+echo '        h1 {'
+echo '            font-size: 3em;'
+echo '            background: -webkit-linear-gradient(right, #ff416c, #ff4b2b);'
+echo '            -webkit-background-clip: text;'
+echo '            -webkit-text-fill-color: transparent;'
+echo '            text-align: left;'
+echo '            margin: 10px 0;'
+echo '            letter-spacing: 40px;'
+echo '            padding-left: 20px;'
+echo '        }'
+echo '        .grid-container {'
+echo '            display: grid;'
+echo '            grid-template-columns: repeat(10, 1fr);'
+echo '            grid-gap: 5px;'
+echo '            padding: 0 20px;'
+echo '        }'
+echo '        .grid-item img {'
+echo '            width: 100%;'
+echo '            height: auto;'
+echo '        }'
+echo '    </style>'
+echo '</head>'
+echo '<body>'
+echo ''
+echo '<h1>wadsquad</h1>'
+echo ''
+echo '<div class="grid-container">'
+
+for img in "$dir_path"/*.{jpg,png,jpeg}; do
+    echo "    <div class=\"grid-item\"><img src=\"file://$img\"></div>"
+done
+
+echo '</div>'
+echo ''
+echo '</body>'
+echo '</html>'
