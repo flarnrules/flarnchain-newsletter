@@ -1,1 +1,3 @@
-/newsletter_template/settings.py
+/newsletter_sender/settings.py
+/database/
+/env/
