@@ -3,22 +3,18 @@ import smtplib
 import ssl
 from settings import FC_NEWSLETTER_AUTHOR, FC_NEWSLETTER_PASSWORD
 from database_handler import connect_to_database, fetch_emails, close_connection
+from database_handler import main as fetch_emails_from_database
 
 
 # Setup port number and server number
 smtp_port = 587                 # Standard secure SMTP port
 smtp_server = "smtp.gmail.com"  # Google SMTP Server
-
 email_from = FC_NEWSLETTER_AUTHOR
-conn = connect_to_database()
-email_to = fetch_emails(conn)
-close_connection(conn)
+email_to = fetch_emails_from_database()
 password = FC_NEWSLETTER_PASSWORD
 
 # Content of message
-
 message = "hi"
-
 simple_email_context = ssl.create_default_context()
 
 
