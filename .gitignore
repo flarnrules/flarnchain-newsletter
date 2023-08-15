@@ -1,5 +1,5 @@
 /newsletter_sender/settings.py
 /database/
 /env/
-/__pycache__/*
+**/__pycache__/
 
