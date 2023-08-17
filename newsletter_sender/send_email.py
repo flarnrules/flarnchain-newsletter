@@ -1,4 +1,3 @@
-
 import smtplib
 import ssl
 from email.mime.text import MIMEText
@@ -24,17 +23,15 @@ password = FC_NEWSLETTER_PASSWORD
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 
 message = MIMEMultipart("alternative")
-message["Subject"] = "This is the subject"
+message["Subject"] = "Flarnchain Newsletter #132 - A New Paradigm"
 message["From"] = email_from
-message["To"] = ", ".join(email_to)
+message["To"] = "Flarnchain Subscribers"
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ##         End of the multipart message          ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 
-
 simple_email_context = ssl.create_default_context()
-
 
 try:
     print("Connecting to server...")
@@ -43,20 +40,14 @@ try:
     TIE_server.login(email_from, password)
     print("Connected to server")
 
-    print()
-    print(f"Sending email to - {email_to}")
-
-    # Create the email message
-    message = MIMEMultipart("alternative")
-    message["Subject"] = "Your Subject Here"
-    message["From"] = email_from
-    message["To"] = ", ".join(email_to)
+    print(f"Sending email to - {', '.join(email_to)}")
 
     part_html = MIMEText(html_template, "html")
     message.attach(part_html)
 
+    # Send the email using BCC, without setting the "To" field in the header
     TIE_server.sendmail(email_from, email_to, message.as_string())
-    print(f"Email successfully sent to - {email_to}")
+    print(f"Email successfully sent to - {', '.join(email_to)}")
 
 except Exception as e:
     print(e)
@@ -66,4 +57,3 @@ finally:
         TIE_server.quit()
     except:
         print("Server connection already closed.")
-
