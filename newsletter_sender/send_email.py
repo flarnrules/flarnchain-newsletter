@@ -48,6 +48,7 @@ try:
     # Send the email using BCC, without setting the "To" field in the header
     TIE_server.sendmail(email_from, email_to, message.as_string())
     print(f"Email successfully sent to - {', '.join(email_to)}")
+    print(f"Email sent to {len(email_to)} recipients successfully.")
 
 except Exception as e:
     print(e)
