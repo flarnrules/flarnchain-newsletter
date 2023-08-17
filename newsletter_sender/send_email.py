@@ -7,7 +7,7 @@ from settings import FC_NEWSLETTER_AUTHOR, FC_NEWSLETTER_PASSWORD
 from database_handler import main as fetch_emails_from_database
 
 # Read the HTML file that contains the email payload
-with open ('../newsletters/newsletter_template.html', 'r') as file:
+with open ('../newsletters/132.html', 'r') as file:
     html_template = file.read()
 print(html_template)
 
