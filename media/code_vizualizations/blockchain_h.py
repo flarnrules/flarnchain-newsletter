@@ -1,5 +1,7 @@
 import pygame
 import time
+from PIL import Image
+import numpy as np
 
 # Initialize pygame
 pygame.init()
@@ -24,6 +26,7 @@ start_x = 10
 start_y = HEIGHT // 2 - block_height // 2
 
 blocks = []
+frames = []
 
 def draw_window():
     win.fill(WHITE)
@@ -40,6 +43,8 @@ def draw_window():
         win.blit(counter_text, text_rect)
 
     pygame.display.update()
+
+    frames.append(pygame.surfarray.array3d(pygame.display.get_surface()))
 
 def main():
     clock = pygame.time.Clock()
@@ -69,6 +74,10 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+    
+    # Convert frames to GIF using Pillow
+    imgs = [Image.fromarray(np.flipud(frame)) for frame in frames]  # Only flip vertically
+    imgs[0].save('blockchain_h_viz.gif', save_all=True, append_images=imgs[1:], optimize=False, duration=100, loop=0)
 
     pygame.quit()
 

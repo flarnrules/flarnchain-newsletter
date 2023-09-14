@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fdf2d2;
+      border: 10px solid #ffe261;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .banner {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: auto;
+    }
+    .tagline {
+      text-align: center;
+      font-size: 14px;
+      color:#777
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+    .content {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .ascii-graphic {
+      text-align: center;
+      font-size: 18px;
+      color:#ffdb10;
+      font-family: monospace;
+      font-weight: lighter;    
+    }
+    .picture {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: auto;
+      border: 5px solid #ffe261;
+    }
+    .caption {
+      width: 100%;
+      text-align: center;
+      max-width: 500px;
+      display: block;
+      margin: auto;
+      font-size: 14px;
+      color:#575757
+    }
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+    }
+    .nft-feature {
+      text-align: center;
+      font-size: 26px;
+      font-family: 'Courier New', monosace;
+    }
+    .flarncoin {
+      width: 100%;
+      max-width: 100px;
+      display: block;
+      margin: auto;
+    }
+    .fine-print {
+      text-align: center;
+      font-size: 8px;
+      color: #b9b9b9;
+    }
+    .compare-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+    .image-box {
+      width: 200px;
+      height: 196px;
+      border: 3px solid #ffe261;
+    }
+    .image-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    .arrow-box {
+      width: 50px;
+      text-align: center;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="header">
+     <h1>Flarnchain Newsletter #136 - What even is a blockchain?</h1>
+    </div>
+    <img src="https://github.com/flarnrules/flarnchain-newsletter/blob/main/templates/standard_images/flarnchain-banner.png?raw=true" alt="The flarnchain banner" class="banner"/>
+    <div class="tagline">"an ocean of knowledge, one inch deep"</div>
+    <div class="content">
+      <p>Happy Wednesday / Thursday morning everybody!</p>
+      <p>Welcome to the Flarnchain newsletter, delivered to your inbox <i>each and every week</i> <b><i>like an atomic clock</i></b>. In this edition, we'll be covering:</p>
+      <ul>
+        <li>A new market animal -> crab</li>
+        <li>A visualization of a blockchain</li>
+        <li>Nothing else important really...</li>
+      </ul>
+      <p>Let's get started with a short conversation on the crypto markets</p>
+      <p></p>
+      <div class="ascii-graphic"> ~/~|~\~|~/~\~/~|~\~|~/~\~/~|~\~|~/~\~</div>
+      <p></p>
+      <H3>Market Update / Weekly Chart</H3>
+        <p>This week the crypto markets were pretty volatile, but since I use Wednesday as my opportunity to capture this data point, markets just look stable. Bitcoin is up 2% since last week, ETH is pretty much even, and Cosmos Hub continues is descent to what appears to be zero. Even after some really positive news about Circle (the company behind the stablecoin USDC) launching USDC natively in the cosmos network... Cosmos still can't get it's footing in the broader crypto market. I believe in the "multi-chain" thesis, thus I personally think now is a really good time to be buying ATOM, but that's just like... <i>my opinion man</i>.</p>
+          <img src="https://github.com/flarnrules/flarnchain-newsletter/blob/main/media/weekly_chart/136.png?raw=true" alt="The weekly chart" class="picture"/>
+          <div class="caption">a chart depicting the price of Bitcoin, and the % change of Ethereum, Bitcoin, and Cosmos Hub since February 8, 2023</div> 
+          
+          <p>Not much else to say that I haven't already said. Looks like markets stopped their free fall to zero... for now.</p>
+
+        <h3>Market Animal</h3>
+          <p>This week, the crypto market stopped dropping. We broke a 4 week bear streak, and are on to something new. Is this... a break? Not sure. Right now though, we crabbin. Things might be changing, or we are just taking a rest...</p>
+          <img src="https://github.com/flarnrules/flarnchain-newsletter/blob/main/media/market_animals/136.png?raw=true" alt="a crab" class="picture"/>
+          <div class="caption">a crab on sand with a blue background</div>
+          <p></p>
+        
+        <h3>What even is a blockchain?</h3>
+          <p>Last week we got into some of the technical details of the Bitcoin protocol. 21 million maximum supply, halving event, all that jazz. This week I'm going to try and revisit some fundamental concepts of <i>most</i> cryptocurrencies, namely... that they live on datastructures called "Blockchains"</p>
+
+          <img src="https://github.com/flarnrules/flarnchain-newsletter/blob/main/media/code_vizualizations/blockchain_h_viz.gif?raw=true" alt="A picture of Bitcoin" class="picture"/>
+          <div class="caption">This is a Bitcoin. It is "saying" a Bitcoin wallet address.</div>
+
+          <p>Put simply, blockchains are really just a data structure. And to be fair, a relatively slow and inefficient datastructure. They aren't all as slow and inefficient as Bitcoin, but that's because of Bitcoins <b>consensus mechanism</b> but we can talk about consensus and other stuff like that in future newsletters. This episode of flarnchain is meant to just describe the basics, one basics at a time.</p>
+
+          <img src="https://github.com/flarnrules/flarnchain-newsletter/blob/main/media/btc_final_form.png?raw=true" alt="A picture of Bitcoin standing on the sun, holding the earth" class="picture"/>
+          <div class="caption">In this image, Bitcoin is indicating that it has not reached it's final form.</div>
+
+          <p>A <b>blockchain</b> is like a continuously growing vertical tower of blocks. Each block is stacked on top of the previous one and has a connector pointing downwards towards the block beneath it. This connector signifies the relationship and dependency between blocks.
+
+            <ol><b>Individual Blocks:</b> Each block in this tower contains some data, depicted by the counter inside it. As time goes on, new blocks are added to the top of this tower, one after the other.</ol>
+            
+            <ol><b>Connectors with Arrows:</b> The connectors (lines with arrows) between the blocks are crucial. They represent the "chain" in "blockchain". The arrow at the end of each connector points towards the previous block, signifying that each block, except the very first one, relies on the information from the block below it. This interdependence ensures that once a block has been added, its data can't be changed without altering all the subsequent blocks, making the blockchain very secure.</ol>
+            
+            <ol><b>Genesis Block:</b> The very first block at the bottom is special and is often referred to as the "Genesis Block". It's the foundation of the entire blockchain. Every other block that gets added above it is linked back through the chain of connectors, all the way to this genesis block.</ol>
+            
+            In essence, the blockchain is a digital record or ledger, where each entry (or block) is connected and secured to the ones before it. The continuous addition of blocks on top signifies the ongoing nature of recording data, and the downward-pointing arrows symbolize the inherent security and connection between these records.
+            
+            The visualization helps in understanding that changing any block would require altering all the blocks above it, making tampering evident and maintaining the integrity of the data.</p>
+
+          <p>By the way, I made the above visualization entirely with code. It took me kind of a long time, because I suck at coding, but I'm starting to get the hang of some basics, which is quite exciting. I used the Python programming language, and imported the following libraries: pygame, time, PIL and numpy.</p>
+            
+        <p></p>
+        
+        <h3>Flarnchain Update</h3>
+          <p>Only thing I can give as an update to the Flarnchain ecosystem is that I'm making progress on my programming journey, which is crucial to being able to deploy a real live blockchain. We are currently in Phase 1 - Discovery, and we will be in Phase 1 for a few more months.</p>
+
+          <img src="https://github.com/flarnrules/flarnchain-newsletter/blob/main/media/flarnmaps/136.png?raw=true" alt="The Flarnmap, as of Sep 14, 2023" class="picture"/>
+          <div class="caption">Each column is a phase, each block is a year, inside each block is every single Wednesday formatted like this: mm/dd/yy</div>
+
+          <p>When I started this newsletter, I created a high-level 12 year plan for the Flarnchain blockchain, which I've been referring to as the "flarnmap". I haven't shown the flarnmap in a newsletter for quite some time. It's displayed somewhere on the website that I haven't maintained in several months. Rather than mention the flarnmap occasionally and at random, I think it's a good idea to start providing development updates each and every week, so that those of you who are insteresting in learning about how to be a participant in the network will have a clear undersatnding of where I'd like the network to go. <i>Note, the flarnmap represents an enthusiatic and optimistic set of <b>goals</b>, and in no way does it represent any sort of garuntee.</i> That said, it is currently a goal that is well on it's way to completion due to the nature of the flarnmap.</p>
+
+        <p>Okay that's all for tonight.</p>
+
+      <p>Thanks for reading, and we'll see you next week!</p>
+      <p>I hope you have a wonderful rest of your week.</p>
+      <p></p>
+      <p>Cheers!</p>
+      <p>-Flarn</p>
+      <p>🤘</p>
+    </div>
+    <div class ="nft-feature"> nft feature </div>
+    
+    <img src="https://github.com/flarnrules/flarnchain-newsletter/blob/main/media/nft_feature/135.png?raw=true" alt="Quoser Bafflespell was b&w last week, but he's back to his usual self this week" class="picture">
+    
+    </div>
+    <div class="caption">Pixel Wizards</div>
+    <div class="caption"><i>On the Stargaze blockchain</i></div>
+
+    <div class="footer">
+      <p>&copy; flarnchain. wednesday nights perterbed.</p>
+      <p><a href="mailto:flarnrules@gmail.com">Unsubscribe</a> | <a href="https://flarnchain.com">Check out Flarnchain</a></p>
+
+      <img src="https://github.com/flarnrules/flarnchain-newsletter/blob/main/templates/standard_images/flarncoin-transparent.png?raw=true" alt="flarncoin" class="flarncoin"/>
+    </div>
+    <div class="fine-print">
+      <p>Send Inquiries to:</p>
+      <p>4535 N Magnolia Ave</p>
+      <p>Unit 1S</p>
+      <p>Chicago, Illinois</p>
+    </div>
+  </div>
+  
+</body>
+</html>
